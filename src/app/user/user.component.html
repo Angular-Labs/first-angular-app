@@ -1,0 +1,13 @@
+<div>
+    <button (click)="onSelectedUser()"><!--para adicionar um evento-->
+        <img [src]="imagePath" [alt]="user.name">
+        <span>{{ user.name }}</span>
+    </button>
+</div>
+
+
+<!--  [src]="imagePath()    //COM SIGNAL FICARIA ASSIM-->
+<!--  <span>{{ name() }}</span>    //sempre que for usar um signal a proriedade tem que ser chamada como uma função-->
+<!--  [alt]="name">   //Aqui eu estou usando a interpolação (Attribute Binding) para concatenar a string com o caminho da imagem. 
+Como o "Property Binding" visa propriedades (e não atributos), isso pode ser um problema. É por isso que o Angular oferece uma 
+leve variação da sintaxe do "Property Binding" que permite vincular atributos a valores dinâmicos.--> 

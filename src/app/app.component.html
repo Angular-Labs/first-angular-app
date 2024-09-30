@@ -1,0 +1,33 @@
+<app-header /> <!--Caso não tenha nada entre as tags eu posso escrever dessa forma-->
+
+<main>
+    <ul id="users">
+        @for (user of users; track user.id){
+         <li>
+            <app-user [user]="user" (select)="onSelectUser($event)" />
+        <!-- o $event também pode ser usada em eventos de built-in como o "click" -->
+        </li>   
+        }   
+<!--        <li>
+            <app-user 
+            [user]="users[0]"
+            [id]="users[0].id" 
+            [avatar]="users[0].avatar" 
+            [name]="users[0].name" 
+            (select)="onSelectUser($event)"
+        /> codigo anterior dos testes, o $event também pode ser usada em eventos de built-in como o "click"
+        </li> -->
+    </ul>
+
+<app-tasks [name]="selectedUser ? selectedUser.name: ''" />
+
+</main>
+
+
+<!--  
+    com signal:
+    <app-user [avatar]="users[0].avatar" [name]="users[0].name" />
+
+    sem signal:
+    <app-user avatar="{{ users[0].avatar }}" name="{{ users[0].name }}" />
+-->

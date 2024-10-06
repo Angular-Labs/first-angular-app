@@ -10,9 +10,8 @@ import { Component } from '@angular/core';
     styles: [
         'h1 { font-weight: normal; }'
     ]
-    
     */
     styleUrl: './header.component.css'
 })
 //O nome do da classe descreve o que fará o componente
-export class HeaderComponent {}
+export class HeaderComponent {}; //exporta a classe para que possa ser utilizada em outros lugares

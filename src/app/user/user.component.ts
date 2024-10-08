@@ -1,6 +1,8 @@
 /* -------------------------------   SEM SIGNAL   ---------------------------------- */
 
 import { Component, EventEmitter, Input, Output} from '@angular/core';
+
+import { type User } from './user.model';
 //Input = decorador
 //input = função
 /*output = função, é apenas uma função normal que pode ser chamada dentro do componente, 
@@ -14,11 +16,11 @@ que é responsável por emitir eventos que podem ser capturados pelo componente 
 //  name: string;
 //}
 
-interface User { //com a interface é possível definir um tipo de objeto
-  id: string;
-  avatar: string;
-  name: string;
-}
+//interface User { //com a interface é possível definir um tipo de objeto
+ // id: string;
+ // avatar: string;
+ // name: string;
+//}
 
 @Component({
   selector: 'app-user',
